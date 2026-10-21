@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/icon.png" width="160" alt="Chaos Hub icon: a black chaos star with a blue eye in its center ring">
+</p>
+
 # 👑 Chaos Hub
 
 **All your chats in one sparkly Android app.** Discord, Telegram, Messenger, Instagram, WhatsApp, TikTok, X, IRC, texts, TextNow, Twitch, VK, Tumblr and Imgur, plus any website you add, each in its own tab that stays signed in. Like Franz, but for your phone.
