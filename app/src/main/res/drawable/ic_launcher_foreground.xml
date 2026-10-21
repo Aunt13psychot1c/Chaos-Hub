@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Back bubble -->
+    <path
+        android:fillColor="#B3FFFFFF"
+        android:pathData="M30,32h30a6,6 0,0 1,6 6v14a6,6 0,0 1,-6 6h-18l-8,7v-7h-4a6,6 0,0 1,-6 -6v-14a6,6 0,0 1,6 -6z" />
+    <!-- Front bubble -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M50,46h26a6,6 0,0 1,6 6v12a6,6 0,0 1,-6 6h-3v7l-8,-7h-15a6,6 0,0 1,-6 -6v-12a6,6 0,0 1,6 -6z" />
+    <!-- Dots in the front bubble -->
+    <path
+        android:fillColor="#FF6B2BD9"
+        android:pathData="M56,58m-2.5,0a2.5,2.5 0,1 1,5 0a2.5,2.5 0,1 1,-5 0M63,58m-2.5,0a2.5,2.5 0,1 1,5 0a2.5,2.5 0,1 1,-5 0M70,58m-2.5,0a2.5,2.5 0,1 1,5 0a2.5,2.5 0,1 1,-5 0" />
+    <!-- Sparkles -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M74,26L75.6,31.4L81,33L75.6,34.6L74,40L72.4,34.6L67,33L72.4,31.4Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M30,70L30.9,73.1L34,74L30.9,74.9L30,78L29.1,74.9L26,74L29.1,73.1Z" />
+</vector>
