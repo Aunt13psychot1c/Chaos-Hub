@@ -41,7 +41,7 @@ jobs:
           set -o pipefail
           # On failure, repeat the compiler's complaints as annotations so they show on the
           # run's summary page without digging through the full log.
-          ./gradlew testPreviewUnitTest assemblePreview --no-daemon --stacktrace 2>&1 | tee build.log || {
+          ./gradlew testDebugUnitTest assemblePreview --no-daemon --stacktrace 2>&1 | tee build.log || {
             grep -E '^e: |error:|What went wrong|^> |FAILED|Expected|but was' build.log | head -40 |
               while IFS= read -r line; do echo "::error::${line}"; done
             exit 1
