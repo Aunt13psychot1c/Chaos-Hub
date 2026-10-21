@@ -62,6 +62,37 @@ object BuiltIns {
             id = "irc", name = "IRC", url = "https://web.libera.chat/", emoji = "📡",
             color = 0xFFFF8A00, builtIn = true,
             domains = listOf("libera.chat")
+        ),
+        // Extras start switched off, so a fresh install isn't running fourteen pages at once.
+        ChatService(
+            id = "google-messages", name = "Texts", url = "https://messages.google.com/web/", emoji = "📨",
+            color = 0xFF1A73E8, desktop = true, enabled = false, builtIn = true,
+            domains = listOf("messages.google.com", "google.com", "gstatic.com")
+        ),
+        ChatService(
+            id = "textnow", name = "TextNow", url = "https://www.textnow.com/messaging", emoji = "☎️",
+            color = 0xFF7A2BF5, desktop = true, enabled = false, builtIn = true,
+            domains = listOf("textnow.com", "textnow.me")
+        ),
+        ChatService(
+            id = "twitch", name = "Twitch", url = "https://www.twitch.tv/", emoji = "📺",
+            color = 0xFF9146FF, enabled = false, builtIn = true,
+            domains = listOf("twitch.tv", "ttvnw.net", "jtvnw.net")
+        ),
+        ChatService(
+            id = "vk", name = "VK", url = "https://vk.com/im", emoji = "💙",
+            color = 0xFF0077FF, enabled = false, builtIn = true,
+            domains = listOf("vk.com", "vk.ru", "userapi.com", "vkuser.net")
+        ),
+        ChatService(
+            id = "tumblr", name = "Tumblr", url = "https://www.tumblr.com/", emoji = "📝",
+            color = 0xFF2E3E5C, enabled = false, builtIn = true,
+            domains = listOf("tumblr.com")
+        ),
+        ChatService(
+            id = "imgur", name = "Imgur", url = "https://imgur.com/", emoji = "🖼️",
+            color = 0xFF1BB76E, enabled = false, builtIn = true,
+            domains = listOf("imgur.com")
         )
     )
 }
