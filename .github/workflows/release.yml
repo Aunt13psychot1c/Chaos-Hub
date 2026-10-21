@@ -104,8 +104,15 @@ jobs:
           VERSION_CODE: ${{ steps.ver.outputs.code }}
           VERSION_NAME: ${{ steps.ver.outputs.name }}
         run: |
+          set -o pipefail
+          # On failure, repeat the build's complaints as annotations on the run's summary page.
           ./gradlew assembleRelease --no-daemon --stacktrace \
-            -PversionCode="$VERSION_CODE" -PversionName="$VERSION_NAME"
+            -PversionCode="$VERSION_CODE" -PversionName="$VERSION_NAME" 2>&1 | tee build.log || {
+            grep -v '> Task' build.log | grep -E -A2 '^e: |rror|What went wrong|Caused by|eystore|assword|alias' |
+              head -30 | tr '\n' ' ' | cut -c1-3000 | sed 's/^/::error::/'
+            echo
+            exit 1
+          }
 
       - name: Throw away the unpacked key
         if: always()
