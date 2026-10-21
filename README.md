@@ -1,6 +1,6 @@
 # 👑 Chaos Hub
 
-**All your chats in one sparkly Android app.** Discord, Telegram, Messenger, Instagram, WhatsApp, TikTok, X and IRC, plus any website you add, each in its own tab that stays signed in. Like Franz, but for your phone.
+**All your chats in one sparkly Android app.** Discord, Telegram, Messenger, Instagram, WhatsApp, TikTok, X, IRC, texts, TextNow, Twitch, VK, Tumblr and Imgur, plus any website you add, each in its own tab that stays signed in. Like Franz, but for your phone.
 
 Made by **Aunt13psychot1c**, the Queen of Chaos. Sister app to [Chaos Bell](https://github.com/Aunt13psychot1c/Chaos-Bell) 🔔
 
@@ -23,6 +23,14 @@ Made by **Aunt13psychot1c**, the Queen of Chaos. Sister app to [Chaos Bell](http
 | 🎵 TikTok | tiktok.com/messages (computer version) |
 | ✖️ X | x.com/messages |
 | 📡 IRC | web.libera.chat |
+| 📨 Texts | messages.google.com/web (pair with Google Messages on your phone) |
+| ☎️ TextNow | textnow.com/messaging |
+| 📺 Twitch | twitch.tv |
+| 💙 VK | vk.com/im |
+| 📝 Tumblr | tumblr.com |
+| 🖼️ Imgur | imgur.com |
+
+The first eight are on from the start; the rest are waiting in ⚙️, ready to switch on.
 
 ## 📥 Install
 
@@ -49,6 +57,7 @@ Android loves putting apps to sleep. For notifications that keep working:
 - Voice and video calls aren't supported yet.
 - Some sites change often. If one stops loading, a site update is usually the reason.
 - One account per site for now.
+- **Signal** has no website to chat from (only its apps), and **OnionShare** needs the Tor network, so neither can be a tab.
 
 ## 🛠️ For builders
 
