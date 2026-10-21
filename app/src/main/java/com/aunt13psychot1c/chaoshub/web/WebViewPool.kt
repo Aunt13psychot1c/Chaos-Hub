@@ -97,6 +97,11 @@ object WebViewPool {
             allowContentAccess = false
             val default = userAgentString
             userAgentString = if (service.desktop) UserAgents.desktop(default) else UserAgents.mobile(default)
+            if (service.desktop) {
+                // Lay the page out at desktop width and shrink it to fit, like Chrome's Desktop site.
+                useWideViewPort = true
+                loadWithOverviewMode = true
+            }
         }
         CookieManager.getInstance().apply {
             setAcceptCookie(true)
@@ -105,7 +110,10 @@ object WebViewPool {
 
         wv.addJavascriptInterface(Bridge(appContext, service.id), "ChaosHub")
         val earlyShim = WebViewFeature.isFeatureSupported(WebViewFeature.DOCUMENT_START_SCRIPT)
-        if (earlyShim) WebViewCompat.addDocumentStartJavaScript(wv, NOTIFICATION_SHIM, setOf("*"))
+        if (earlyShim) {
+            WebViewCompat.addDocumentStartJavaScript(wv, NOTIFICATION_SHIM, setOf("*"))
+            if (service.desktop) WebViewCompat.addDocumentStartJavaScript(wv, DESKTOP_VIEWPORT, setOf("*"))
+        }
 
         wv.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
@@ -126,7 +134,10 @@ object WebViewPool {
             override fun onPageStarted(view: WebView, url: String?, favicon: Bitmap?) {
                 // A fresh page reports its count from scratch; don't treat that as "new".
                 HubState.unread.remove(service.id)
-                if (!earlyShim) view.evaluateJavascript(NOTIFICATION_SHIM, null)
+                if (!earlyShim) {
+                    view.evaluateJavascript(NOTIFICATION_SHIM, null)
+                    if (service.desktop) view.evaluateJavascript(DESKTOP_VIEWPORT, null)
+                }
             }
         }
 

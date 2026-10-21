@@ -49,6 +49,7 @@ Android loves putting apps to sleep. For notifications that keep working:
 ## 💡 Tips
 
 - **Tap the tab you're already on** to reload it if a page gets stuck.
+- **Computer-version tabs** (Discord, WhatsApp, TikTok, and any site you add that way) show the whole desktop page shrunk to fit your screen. **Pinch to zoom** in on the part you want.
 - **Back** goes back inside the chat; at the start, the hub steps aside but keeps running.
 - Switch chats you don't use **off** in ⚙️. Every open chat uses memory and battery.
 
